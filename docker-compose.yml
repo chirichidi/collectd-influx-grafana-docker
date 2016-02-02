@@ -1,0 +1,13 @@
+influxdb:
+  build: ./influxdb
+  ports: ['80:80']
+
+
+# docker run -d -p 8083:8083 -p 8084:8084 -p 8086:8086 -p 25826:25826/udp -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="somepassword" -e PRE_CREATE_DB=collectd_db -e COLLECTD_DB="collectd_db" -e COLLECTD_BINDING=':25826' influxdb
+
+
+# docker build -t collectd .
+# docker run -d collectd
+# docker rmi -f $(docker images | grep "^<none>" | awk "{print $3}")
+# 
+# docker run -d --name=grafana -p 3000:3000 grafana/grafana
