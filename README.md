@@ -8,6 +8,7 @@ At the moment docker-compose not working, instead bring up containers as listed 
 
     docker build -t collectd .
     docker run -d collectd
+
 * influxdb
 
     docker build -t influxdb .
